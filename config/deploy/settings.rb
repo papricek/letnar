@@ -20,7 +20,7 @@ set :use_sudo, false
 set :scm, :git
 set :git_shallow_clone, 1
 set :branch, "master"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 set :copy_exclude, %w(test .git doc)
 
 # Bundler
