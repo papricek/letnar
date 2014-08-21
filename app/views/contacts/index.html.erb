@@ -1,1 +1,45 @@
-Coming soon!
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+  <% @categories.each do |category| %>
+    <section class="post">
+      <header class="post-header">
+        <h2>
+          <%= category.topic %>
+          <span class="post-title-links">
+            <% category.facebook_urls.each do |url| %>
+              <%= link_to fa_icon("facebook-square"), url, target: "_blank", title: "Zdroj referencí" %>
+            <% end %>
+          </span>
+        </h2>
+
+      </header>
+
+      <div class="post-description">
+      <ul>
+        <% category.contacts.each do |contact| %>
+          <li>
+            <% if contact.name %>
+              <strong><%= contact.name %></strong>
+            <% end %>
+            <% if contact.address %>
+              v ulici <strong><%= contact.address %></strong>
+            <% end %>
+             <% contact.phones.each do |phone| %>
+              &nbsp;&nbsp;&nbsp;<%= fa_icon "phone", text: phone %>
+            <% end %>
+            <% if contact.url %>
+              <% if contact.name.blank? %>
+                Jméno neuvedeno
+              <% end %>
+              <% contact.urls.each do |url| %>
+                &nbsp;<%= link_to fa_icon("external-link"), url, target: "_blank" %>
+              <% end %>
+            <% end %>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </section>
+  <% end %>
+
+</div>
