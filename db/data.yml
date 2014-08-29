@@ -11,6 +11,8 @@
   - name: "Truhlářství Petras"
   - name: "Koušek a Bašus"
     address: "Veletržní 31"
+  - name: "Josef Lebeda"
+    address: "Strojnická"
 
 - :topic: Lékař zubní
   :url: "https://www.facebook.com/groups/137034543034563/permalink/677704938967518/"
@@ -20,8 +22,6 @@
   - name: "Mudr. Hrachova"
     address: "Janovského"
   - url: "http://www.stomatologie-krizova.cz/cs/"
-  - name: "Švejda"
-    phone: "233375683"
   - name: "Dřevo"
 
 - :topic: Květinářství
@@ -63,6 +63,11 @@
   - name: "Z + M bezpečnostní dveře"
     url: "http://www.nelso.cz/cz/place/312888/"
     address: "Heřmanova 14"
+
+- :topic: Pokrývačství, klempířství, tesařství
+  :contacts:
+  - name: "Petr Kruliš"
+    url: "mailto:kruldapetr@centrum.cz"
 
 - :topic: Čalounictví
   :url: "https://www.facebook.com/groups/137034543034563/permalink/646334265437919/"
@@ -211,17 +216,29 @@
 - :topic: "Veterina"
   :url: "https://www.facebook.com/groups/137034543034563/permalink/556393777765302/"
   :contacts:
-  - url: "http://www.volny.cz/rehak.vet/"
+  - name: "Miroslav Řehák"
+    url: "http://www.vetrehak.cz/ https://www.facebook.com/veterinaMiroslavRehak"
   - address: "U Smaltovny, Strojnická"
   - name: "Dr. Hlasný"
     address: "Sochařská 4"
-  - url: "http://livet.cz/"
+  - name: "Livet"
+    url: "http://livet.cz/ https://www.facebook.com/LIVETerinary"
   - name: "Aleš Hlásný"
     phone: "223376848"
     address: "Malířská"
+  - name: "Pet Care Clinic"
+    url: "http://www.petcareclinic.cz/o-klinice/ https://www.facebook.com/pages/Pet-Care-Clinic/106109576205470"
 
 - :topic: "Uklízení"
   :url: "https://www.facebook.com/groups/137034543034563/permalink/692901964114482/"
   :contacts:
   - name: "Zuzana Kajtarová"
     phone: "602542914"
+  - name: "Nudný úklid"
+    phone: "724792209"
+    url: "http://www.nudnyuklid.cz https://www.facebook.com/realhappyhome"
+
+- :topic: "Tisk"
+  :contacts:
+  - name: "TYGR TISK"
+    url: "http://www.tygrtisk.cz"
