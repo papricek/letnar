@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
 
   def index
-    @categories = Category.by_topic
+    @categories = Category.all
   end
 
 end

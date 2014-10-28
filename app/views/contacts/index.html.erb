@@ -4,9 +4,9 @@
     <section class="post">
       <header class="post-header">
         <h2>
-          <%= category.topic %>
+          <%= category.name %>
           <span class="post-title-links">
-            <% category.facebook_urls.each do |url| %>
+            <% category.urls.each do |url| %>
               <%= link_to fa_icon("facebook-square"), url, target: "_blank", title: "Zdroj referencí" %>
             <% end %>
           </span>
@@ -27,7 +27,7 @@
              <% contact.phones.each do |phone| %>
               &nbsp;&nbsp;&nbsp;<%= fa_icon "phone", text: phone %>
             <% end %>
-            <% if contact.url %>
+            <% if contact.urls.present? %>
               <% if contact.name.blank? %>
                 Jméno neuvedeno
               <% end %>
