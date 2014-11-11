@@ -14,6 +14,9 @@ gem 'omniauth-facebook'
 # frontend
 gem 'pure-css-rails'
 gem 'font-awesome-rails'
+gem 'ember-rails'
+gem 'ember-source'
+gem 'emblem-rails'
 
 group :development do
   gem 'better_errors'
