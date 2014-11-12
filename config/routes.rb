@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :categories
+    resources :contacts
   end
 
   get 'auth/:provider/callback', to: 'sessions#create'
