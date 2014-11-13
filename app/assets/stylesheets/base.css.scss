@@ -14,6 +14,8 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   background: image-url('giftly.png');
+  width:100%;
+  height:100%;
 }
 
 .container {
@@ -68,7 +70,8 @@ body {
 
 .sidebar {
   overflow: scroll;
-  height: 405px;
+  position: absolute;
+  margin-bottom: 20px;
 
   ul {
     padding: 0;

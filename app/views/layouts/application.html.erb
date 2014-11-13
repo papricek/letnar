@@ -4,10 +4,8 @@
   <title>Letnar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Adresář služeb na Letné a v Holešovicích">
-  
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
-
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
@@ -25,7 +23,7 @@
       <div class="pure-u-sm-4-24">
         <div class="header-navigation">
           <% if current_user.present? %>
-            </i><i class="fa fa-user"></i><%= current_user.name %>
+            <i class="fa fa-user"></i><%= current_user.name %>
           <% else %>
             <i class="fa fa-user"></i><%= link_to "Login with Facebook", "auth/facebook" %>
           <% end %>

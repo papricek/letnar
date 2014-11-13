@@ -1,8 +1,7 @@
 class Api::CategoriesController < ApplicationController
-  respond_to :json
 
   def index
-    respond_with Category.all
+    render json: Category.includes(:contacts)
   end
 
   def show
