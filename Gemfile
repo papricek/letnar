@@ -10,6 +10,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'omniauth-facebook'
+gem 'graticule'
 
 # frontend
 gem 'pure-css-rails'

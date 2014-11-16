@@ -1,4 +1,5 @@
 App.CategoryController = Ember.ObjectController.extend
+  needs: ['application']
 
   actions:
     saveChanges: ->

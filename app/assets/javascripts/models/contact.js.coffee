@@ -3,4 +3,6 @@ App.Contact = DS.Model.extend
   urls: DS.attr('string')
   phones: DS.attr('string')
   address: DS.attr('string')
+  latitude: DS.attr('string')
+  longitude: DS.attr('string')
   category: DS.belongsTo('category')
