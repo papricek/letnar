@@ -4,4 +4,4 @@ App.CategoryRoute = Ember.Route.extend
 
   setupController: (controller, model) ->
     controller.set('model', model)
-    @controllerFor('contacts').set('contacts', model.get('contacts'))
+    @controllerFor('index').set('contacts', model.get('contacts'))
