@@ -5,5 +5,5 @@ App.Router.reopen
   rootURL: '/'
 
 App.Router.map ()->
-  @resource 'categories', path: '/', ->
+  @resource 'contacts', path: '/', ->
     @resource 'category', path: '/categories/:id'

@@ -6,7 +6,7 @@ App.GoogleMapComponent = Ember.Component.extend
     container = @$('.map-canvas')
     options = {
       center: new google.maps.LatLng(@get("latitude"), @get("longitude")),
-      zoom: 17,
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     @set('map', new google.maps.Map(container[0], options))
@@ -26,13 +26,14 @@ App.GoogleMapComponent = Ember.Component.extend
 
     # set them again from current contacts
     contacts.forEach (contact) ->
+      coordinates = new google.maps.LatLng(contact.get('latitude'), contact.get('longitude'))
       marker = new google.maps.Marker
-        position: new google.maps.LatLng(contact.get('latitude'), contact.get('longitude'))
+        position: coordinates
         map: map
 
+      contact.marker = marker
       markers.pushObject(marker)
 
-    # save markers
     @set('markers', markers)
 
-  ).observes('contacts.@each.latitude', 'contacts.@each.longitude')
+  ).observes('contacts.@each')

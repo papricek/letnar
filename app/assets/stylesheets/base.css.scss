@@ -1,3 +1,14 @@
+// Variables
+
+$orange: #FFB23C;
+$orange-light: #ED9D00;
+$white: white;
+$green: #1EAB8B;
+$gradient-green-dark-top: #048467;
+$gradient-green-dark-bottom: #007359;
+$gradient-green-light-top: #0BBC94;
+$gradient-green-light-bottom: #21A789;
+
 // Overrides
 
 .pure-g {
@@ -6,6 +17,13 @@
 
 .fa {
   margin-right: 10px;
+}
+
+// Mixins 
+
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background: linear-gradient($from, $to);
 }
 
 // General
@@ -27,11 +45,10 @@ body {
 
 .header {
   width: 100%;
-  border-top: 5px solid #6C7E4B;
+  border-top: 5px solid #1EAB8B;
   border-bottom: 1px solid white;
-  background: #869A5E;
-  background: linear-gradient(#869A5E, #95AE68);
-  color: #DAE3C8;
+  background: $orange;
+  color: $white;
   font-weight: 300;
   font-size: 13px;
 
@@ -41,14 +58,13 @@ body {
 
     a {
       display: inline;
-      color: white;
+      color: $white;
       font-weight: 500;
       font-size: 19px;
       text-decoration: none;
     }
     span {
       font-size: 13px;
-      color: #DAE3C8;
       font-weight: 300;
     }
   }
@@ -84,12 +100,20 @@ body {
       padding: 6px 10px;
       font-weight: 300;
       display: block;
-      border-bottom: 1px solid white;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
-      background: linear-gradient(#869A5E, #95AE68);
-      color: white;
+      border-bottom: 1px solid $white;
+      border-left: 1px solid $white;
+      border-right: 1px solid $white;
+      color: $white;
       cursor: pointer;
+      @include gradient($gradient-green-light-bottom, $gradient-green-light-top);
+
+      &.all.active {
+        @include gradient($gradient-green-dark-bottom, $gradient-green-dark-top);
+      }
+
+      &.active, &:hover {
+        background: $orange-light;
+      }
     }
   }
 }
