@@ -4,11 +4,12 @@
 
 <div class="sidebar pure-u-1 pure-u-sm-4-24">
   <ul>
-    {{link-to 'Všechny služby' 'application' tagName="li" class="all"}}
 
-    {{#each categories}}
-      {{#link-to 'category' this tagName="li"}}
-        {{name}}
+    {{link-to 'Všechny služby' 'categories.index' tagName="li" class="all"}}
+
+    {{#each category in model}}
+      {{#link-to 'categories.show' category tagName="li"}}
+        {{category.name}}
       {{/link-to}}
     {{/each}}
 
@@ -16,5 +17,11 @@
 </div>
 
 <div class="content pure-u-1 pure-u-sm-20-24">
+
   {{outlet}}
+
+  {{#each contacts}}
+    {{name}}
+  {{/each}}
+
 </div>
