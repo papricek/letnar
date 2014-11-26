@@ -1,11 +1,132 @@
-h1 {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: 300;
-  font-size: 3em;
+// Variables
+
+$orange: #FFB23C;
+$orange-light: #ED9D00;
+$white: white;
+$green: #1EAB8B;
+$gradient-green-dark-top: #048467;
+$gradient-green-dark-bottom: #007359;
+$gradient-green-light-top: #0BBC94;
+$gradient-green-light-bottom: #21A789;
+
+// Overrides
+
+.pure-g {
+  letter-spacing: inherit!important;
 }
 
-h2 {
+.fa {
+  margin-right: 10px;
+}
+
+// Mixins 
+
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background: linear-gradient($from, $to);
+}
+
+// General
+
+body {
   font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.4em; 
+  font-weight: 300;
+  background: image-url('giftly.png');
+  width:100%;
+  height:100%;
+}
+
+.container {
+  margin: auto;
+  max-width: 1024px;
+  position: relative;
+}
+
+// Header
+
+.header {
+  width: 100%;
+  border-top: 5px solid #1EAB8B;
+  border-bottom: 1px solid white;
+  background: $orange;
+  color: $white;
+  font-weight: 300;
+  font-size: 13px;
+
+  h1 {
+    margin: 0;
+    padding: 0 10px;
+
+    a {
+      display: inline;
+      color: $white;
+      font-weight: 500;
+      font-size: 19px;
+      text-decoration: none;
+    }
+    span {
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+
+  .header-navigation {
+    padding: 0 10px;
+    line-height: 2.7em;
+  }
+}
+
+// Map
+
+.map-canvas {
+  height: 350px;
+  width: 100%;
+}
+
+// Sidebar
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+
+  a {
+    font-family: 'Open Sans', Arial, sans-serif;
+    list-style-type: none;
+    font-size: 13px;
+    padding: 4px 8px;
+    margin: 4px 2px;
+    font-weight: 300;
+    border-top: 1px solid $white;
+    border-left: 1px solid $white;
+    color: $white;
+    cursor: pointer;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+
+    @include gradient($gradient-green-light-bottom, $gradient-green-light-top);
+
+    &.all.active {
+      @include gradient($gradient-green-dark-bottom, $gradient-green-dark-top);
+    }
+
+    &.active, &:hover {
+      background: $orange-light;
+    }
+  }
+}
+
+.content {
+  background: white;
+}
+
+.footer {
+  text-align: center;
+  color: #6C7E4B;
+
+  a {
+    color: #6C7E4B;
+  }
 }
